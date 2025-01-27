@@ -8,9 +8,9 @@ export const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 // Função para login com Discord
 export const loginWithDiscord = async () => {
   const { error } = await supabaseClient.auth.signInWithOAuth({
-    provider: "discord",
+    provider: "google",
     options: {
-      redirectTo: "https://kchatroom.vercel.app/api/auth/v1/callback", // URL de redirecionamento
+      redirectTo: "https://kchatroom.vercel.app/api/auth/callback", // URL de redirecionamento
     },
   });
 
